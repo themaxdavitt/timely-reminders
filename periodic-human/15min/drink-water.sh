@@ -2,4 +2,10 @@
 
 . /srv/notify.sh
 
-notify "Drink water!"
+minutes="$(date +%M)"
+
+if [ "$minutes" = "00" ]; then
+    notify "Drink water and stand up!"
+else
+    notify "Drink water!"
+fi
