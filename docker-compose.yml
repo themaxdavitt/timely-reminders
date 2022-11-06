@@ -1,0 +1,9 @@
+services:
+  timely-reminders:
+    build:
+      context: .
+      args:
+        PUSHOVER_TOKEN: ${PUSHOVER_TOKEN}
+        PUSHOVER_USER: ${PUSHOVER_USER}
+    env_file:
+      - .env
